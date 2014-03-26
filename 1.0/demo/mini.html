@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>JuicerGallery的demo</title>
+    <title>JuicerKissy的demo</title>
     <script src="http://g.tbcdn.cn/kissy/m/0.2.0/mini-full-min.js" charset="utf-8"></script>
 	<style>
 		h4 {
@@ -22,7 +22,7 @@
 	</style>
 </head>
 <body>
-<h2>JuicerGallery的demo</h2>
+<h2>JuicerKissy的demo</h2>
 <a href="http://m.kissyui.com/" target="_blank">KISSY MINI官方文档</a>
 
 <h3 class="s-title">Demo - 使用 Juicer 渲染模版</h3>			
@@ -87,7 +87,7 @@
 
 <script>
     (function(S) {
-        var debug = ~location.search.indexOf('ks-debug');
+        var debug = ~location.search.indexOf('ks-debug') || true;
 
         if (debug) {
             var srcPath = "../../";
@@ -95,7 +95,7 @@
                 debug: debug,
                 packages:[
                     {
-                        name:"gallery/juicer-gallery",
+                        name:"gallery/juicer-kissy",
                         path:srcPath,
                         charset:"utf-8",
                         ignorePackageNameInUri:true
@@ -104,8 +104,12 @@
             });
         }
 
-        S.use('gallery/juicer-gallery/1.0/mini', function (S, JuicerGallery) {
-            new JuicerGallery();
+        S.use('gallery/juicer-kissy/1.0/mini', function (S, Juicer) {
+            var template = document.getElementById('template').innerHTML,
+              data = JSON.parse(document.getElementById('data').innerHTML),
+              html = Juicer(template, data);
+
+            document.getElementById('juicer').innerHTML = (html.replace(/^\s*/mg, ''));
         })
     })(KISSY);
 </script>

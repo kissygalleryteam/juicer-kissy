@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>JuicerGallery的demo</title>
+    <title>JuicerKissy的demo</title>
     <script src="http://g.tbcdn.cn/kissy/k/1.4.1/seed-min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.0/css/dpl/base-min.css">
 	<style>
@@ -23,7 +23,7 @@
 	</style>
 </head>
 <body>
-<h2>JuicerGallery的demo</h2>
+<h2>JuicerKissy的demo</h2>
 
 <h3 class="s-title">Demo - 使用 Juicer 渲染模版</h3>			
 
@@ -95,7 +95,7 @@
         S.config({
             packages:[
                 {
-                    name:"gallery/juicer-gallery",
+                    name:"gallery/juicer-kissy",
                     path:srcPath,
                     charset:"utf-8",
                     ignorePackageNameInUri:true
@@ -104,7 +104,7 @@
         });
     }
 
-    S.use('gallery/juicer-gallery/1.0/index', function (S, Juicer) {
+    S.use('gallery/juicer-kissy/1.0/index', function (S, Juicer) {
           var template = document.getElementById('template').innerHTML,
               data = JSON.parse(document.getElementById('data').innerHTML),
               html = Juicer(template, data);
