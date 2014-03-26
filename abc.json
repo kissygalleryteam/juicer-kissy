@@ -1,0 +1,17 @@
+{
+    "name": "juicer-gallery",
+    "comName":"JuicerGallery",
+    "version": "1.0",
+    "desc": "",
+    "tag":"Juicer,模板引擎,kissy-mini",
+    "githubName":"paulguo",
+    "author": {
+        "name": "liuhuo.gk",
+        "email": "liuhuo.gk@taobao.com",
+        "page": ""
+    },
+	"flexComboPort":"81",
+	"reserveServerPort":"8081",
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide"
+}
